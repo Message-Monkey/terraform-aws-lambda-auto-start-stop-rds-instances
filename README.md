@@ -52,6 +52,7 @@ module "start_rds_instances" {
 | Name                    | Type                             | Default    | Description                                                                                                                 |
 | ----------------------- | -------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
 | schedule_expression     | string                           |  `Not Set` |  The CloudWatch Schedule Expression to trigger the Lambda. Can be a CRON expression for example. _Required_.                |
+| schedule_state          | string                           |  `ENABLED` | The state of the schedule. Valid values are `ENABLED` or `DISABLED`.                                                                 |
 | name                    | string                           |  `Not Set` |  The name of the lambda to create. _Required_.                                                                              |
 | tags                    | map(string)                      |  `{}`      |  The tags to assign to the created resources.                                                                               |
 | custom_iam_role_arn     | string                           |  `Not Set` |  The IAM role to assign to the Lambda. If not specified, a role with appropriate permissions will be created.               |
